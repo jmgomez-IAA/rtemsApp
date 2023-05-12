@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'whoami'
                 sh 'ls  /opt/rtems-6-sparc-gr712rc-smp-4/src/example++/'
-                sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/example++/'
+                sh 'ls -la'
                 sh 'pwd'
                 sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/example++/ && make'
             }
