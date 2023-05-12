@@ -2,7 +2,10 @@
 
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'juanmagomez/rtems_qdp:v1' } }
+    agent { docker { 
+        image 'juanmagomez/rtems_qdp:v1' 
+        args '-u root:root'
+        } }
     stages {
         stage('build') {
             steps {
