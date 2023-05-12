@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'rmdir /opt/rtems-6-sparc-gr712rc-smp-4/src/app'
-                sh 'ln -s /var/jenkins_home/workspace/rtemsApp_main app'
+                sh 'ln -s /var/jenkins_home/workspace/rtemsApp_main /opt/rtems-6-sparc-gr712rc-smp-4/src/app'
                 //dir('/opt/rtems-6-sparc-gr712rc-smp-4/src/app')
                 sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/app && make'
             }
