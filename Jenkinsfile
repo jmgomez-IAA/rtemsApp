@@ -14,7 +14,8 @@ pipeline {
                 sh 'ls -la'
                 sh 'pwd'
                 sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/example++/ && make'
-                sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/ && ln -s /opt/rtems-6-sparc-gr712rc-smp-4/src/app app'
+                sh 'rmdir /opt/rtems-6-sparc-gr712rc-smp-4/src/app'
+                sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/ && ln -s /var/jenkins_home/workspace/rtemsApp_main app'
                 sh 'ls /opt/rtems-6-sparc-gr712rc-smp-4/src/app/'
             }
         }
