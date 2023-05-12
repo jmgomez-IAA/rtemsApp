@@ -14,6 +14,8 @@ pipeline {
                 sh 'ls -la'
                 sh 'pwd'
                 sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/example++/ && make'
+                sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/ && ln -s /opt/rtems-6-sparc-gr712rc-smp-4/src/app app'
+                sh 'ls /opt/rtems-6-sparc-gr712rc-smp-4/src/app/'
             }
         }
         stage('test') {
