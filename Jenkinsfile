@@ -9,6 +9,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'whoami'
+                sh 'ls  cd /opt/rtems-6-sparc-gr712rc-smp-4/src/example++/'
+                sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/example++/'
+                sh 'pwd'
                 sh 'cd /opt/rtems-6-sparc-gr712rc-smp-4/src/example++/ && make'
             }
         }
